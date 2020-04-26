@@ -1,0 +1,93 @@
+{
+  "additionalProperties": false,
+  "definitions": {
+    "file-conditions": {
+      "anyOf": [
+        {
+          "instanceof": "RegExp"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "properties": {
+    "test": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/file-conditions"
+        },
+        {
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "#/definitions/file-conditions"
+              }
+            ]
+          },
+          "type": "array"
+        }
+      ]
+    },
+    "include": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/file-conditions"
+        },
+        {
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "#/definitions/file-conditions"
+              }
+            ]
+          },
+          "type": "array"
+        }
+      ]
+    },
+    "exclude": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/file-conditions"
+        },
+        {
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "#/definitions/file-conditions"
+              }
+            ]
+          },
+          "type": "array"
+        }
+      ]
+    },
+    "filename": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "instanceof": "Function"
+        }
+      ]
+    },
+    "config": {
+      "type": "object"
+    },
+    "format": {
+      "type": "string"
+    },
+    "formatOptions": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "deleteOriginalAssets": {
+      "type": "boolean"
+    }
+  },
+  "required": [],
+  "type": "object"
+}

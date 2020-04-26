@@ -1,0 +1,34 @@
+{
+  "name": "myoffline-webpack-plugin",
+  "version": "0.1.0",
+  "description": "Generate a compressed archive of compiled assets.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhbhun/myoffline-webpack-plugin.git"
+  },
+  "author": "zhbhun",
+  "homepage": "https://github.com/zhbhun/myoffline-webpack-plugin",
+  "bugs": "https://github.com/zhbhun/myoffline-webpack-plugin/issues",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">= 8.9.0"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "archiver",
+    "compression",
+    "plugin",
+    "webpack"
+  ],
+  "peerDependencies": {
+    "webpack": "^4.3.0 || ^5.0.0"
+  },
+  "dependencies": {
+    "archiver": "^2.0.0",
+    "schema-utils": "^2.6.1",
+    "webpack-sources": "^1.0.1"
+  }
+}
